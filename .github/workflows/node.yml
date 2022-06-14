@@ -22,8 +22,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: run
-        run: npm run
+      - name: start
+        run: npm start
 
   Build-and-test-indexer:
     runs-on: ubuntu-latest
