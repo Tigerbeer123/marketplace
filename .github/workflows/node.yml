@@ -22,15 +22,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Test
-        run: npm test -- --coverage
-        if: ${{ always() }}
-      - name: Report coverage
-        uses: coverallsapp/github-action@master
-        with:
-          base-path: webapp
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: webapp/coverage/lcov.info
+      - name: run
+        run: npm run
 
   Build-and-test-indexer:
     runs-on: ubuntu-latest
